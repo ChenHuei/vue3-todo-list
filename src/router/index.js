@@ -7,6 +7,11 @@ const routes = [
     name: 'Home',
     component: () => import('../components/Home.vue')
   },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'Home',
+    component: () => import('../components/Home.vue')
+  }
 ]
 
 export default createRouter({
