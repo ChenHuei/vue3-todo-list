@@ -1,3 +1,5 @@
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+
 module.exports = {
   css: {
     loaderOptions: {
@@ -7,5 +9,13 @@ module.exports = {
         `
       }
     }
-  }
+  },
+  configureWebpack: {
+    devtool: process.env.NODE_ENV === 'production' ? false : 'cheap-eval-source-map',
+    plugins: [
+      new StyleLintPlugin({
+        files: 'src/**/*.{vue,scss}',
+      }),
+    ]
+  },
 };

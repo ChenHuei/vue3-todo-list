@@ -8,12 +8,7 @@ import List from './home/List'
 export default {
   components: {List},
   setup () {
-  
     return {}
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>
