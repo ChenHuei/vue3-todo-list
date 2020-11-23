@@ -16,3 +16,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.layout {
+  display: flex;
+  justify-content: center;
+}
+</style>
