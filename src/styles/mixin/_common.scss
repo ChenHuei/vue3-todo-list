@@ -1,0 +1,51 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin display-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin background-setting($size: cover, $isHover: true) {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: $size;
+
+  @if ($isHover) {
+    @include hover();
+  }
+}
+
+@mixin hover() {
+  cursor: pointer;
+  transition: 0.5s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+
+@mixin custom-scroll($size: 6px) {
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    @include size($size);
+
+    background-color: transparent;
+
+    &-track,
+    &-track-piece {
+      background-color: transparent;
+    }
+
+    &-thumb {
+      border-radius: 4px;
+      background-color: var(--scrollbar);
+    }
+  }
+}

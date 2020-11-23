@@ -1,0 +1,23 @@
+// // responsive-stylus-mixins ////
+
+@mixin RWD-below($width) {
+  $width: $width - 1;
+
+  @media all and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin RWD-above($width: $tablet) {
+  @media all and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin RWD-between($min-width: $tablet, $max-width: $laptop) {
+  $max-width: $max-width - 1;
+
+  @media all and (min-width: #{$min-width}) and (max-width: #{$max-width}) {
+    @content;
+  }
+}

@@ -1,0 +1,27 @@
+//
+// reboot
+//
+$body-font-family: 'Roboto', 'Noto Sans TC', 'Montserrat', 'Helvetica', 'Arial', 'sans-serif';
+$text-font-color: #333;
+$body-font-size: 12px;
+$body-font-weight: 400;
+$body-line-height: 1.5;
+$body-letter-spacing: 0.025rem;
+
+//
+// RWD
+//
+$min-width: 375px;
+$tablet: 768px;
+$laptop: 1200px;
+
+//
+// z-index
+//
+$z-index-array: (
+  'basic',
+  'prefix',
+  'suffix',
+  'tip',
+  'overlay'
+);

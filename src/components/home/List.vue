@@ -1,7 +1,11 @@
 <template>
   <div class="list">
     list
-    <Item v-for="item in list" :key="item.id" v-bind="item"/>
+    <Item
+      v-for="item in list"
+      :key="item.id"
+      v-bind="item"
+    />
   </div>
 </template>
 

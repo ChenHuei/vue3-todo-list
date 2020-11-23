@@ -1,0 +1,38 @@
+// // If you have to use other language but English,
+// // you need setting document text format to utf-8.
+// // http://blog.shg25.com/?p=97
+@charset 'utf-8';
+
+@import 'base';
+@import 'reboot';
+
+:root {
+  --primary-light: #f5f6f8;
+  --primary: #066ddc;
+  --primary-hover: #33496c;
+  --grey-light: #f2f2f3;
+  --grey: #e4e7ed;
+  --grey-dark: #737b7d;
+  --white: #fff;
+  --black: #373f41;
+  --error: #f05343;
+  --success: #3f916a;
+  --warning: #f2c16e;
+  --mask: rgba(0, 0, 0, 0.3);
+  --scrollbar: #98a4b5;
+}
+
+// class
+[class$='wrapper'] {
+  @include size(100%, auto);
+}
+
+[class$='container'] {
+  @include size(auto, 100%);
+
+  margin: 0 auto;
+
+  @include RWD-above() {
+    max-width: $laptop;
+  }
+}

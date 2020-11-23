@@ -1,0 +1,18 @@
+@function rem($pixels, $base: $body-font-size) {
+  @return $pixels / $base * 1rem;
+}
+
+@mixin font($font-size, $font-weight: 400) {
+  font-size: rem($font-size);
+  font-weight: $font-weight;
+}
+
+@function z-index($name: normal) {
+  $index: index($z-index-array, $name);
+
+  @if not($index) {
+    @error "#{$name} doesn't exist! please checkout your `$z-index-array` variable.";
+  }
+
+  @return $index;
+}

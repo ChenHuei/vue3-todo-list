@@ -19,7 +19,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .layout {
-  display: flex;
-  justify-content: center;
+  @include display-flex();
 }
 </style>
