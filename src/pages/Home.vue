@@ -4,11 +4,11 @@
 </template>
 
 <script>
-import List from './home/List'
+import List from '@/components/home/List'
 export default {
-  components: {List},
-  setup () {
+  components: { List },
+  setup() {
     return {}
-  }
+  },
 }
 </script>
