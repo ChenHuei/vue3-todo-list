@@ -1,26 +1,30 @@
 <template>
-  <div class="layout">
-    <router-view />
+  <div class="layout-wrapper">
+    <div class="layout-container">
+      <div class="layout">
+        <router-view />
+      </div>
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
+<script>
+export default {
   name: 'App',
   setup() {
     return {
-      test: 'test',
+      title: 'TODO LIST',
     }
   },
-})
+}
 </script>
 
 <style lang="scss" scoped>
 .layout {
+  @include size(100%, auto);
   @include display-flex();
 
-  margin-bottom: 20px;
+  flex-direction: column;
+  padding: 12px 16px;
 }
 </style>
